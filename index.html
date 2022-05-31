@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#">
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+    <script src="http://w.soundcloud.com/player/api.js"></script>
+    <title>Guess the Kpop</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="header-container">
+          <button class="how-to-play">
+            <ion-icon name="help-circle-outline"></ion-icon>
+          </button>
+          <h1>노래 맞추기 KPOP버전</h1>
+          <button class="info">
+            <ion-icon name="information-circle-outline"></ion-icon>
+          </button>
+        </div>
+      </header>
+      <div class="main-container">
+      </div>
+      <div class="music-player-container">
+        <div class="input-container">
+          이곡은
+          <input type="text" id="artist-input" placeholder="아티스트" />
+          의
+          <input type="text" id="title-input" placeholder="제목" />
+          이야!
+          <button id="submit">확인</button>
+        </div>
+        <button id="play-music">
+          <ion-icon name="play-circle-outline"></ion-icon>
+        </button>
+      </div>
+    </main>
+  </body>
+</html>

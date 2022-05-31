@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+:root {
+    --black: #121212;
+    --white: #FFF;
+    --gray1: #888888;
+    --gray2: #444444;
+    --green: #1D7E05;
+    --red: #FF0000;
+    --blue: #29ABE0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    word-break: keep-all;
+}
+
+body {
+    background-color: var(--black);
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: 'Jua', sans-serif;
+}
+
+header {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 5rem;
+    max-width: 50rem;
+}
+
+header .header-container button {
+    all: unset;
+    color: var(--white);
+    font-size: 1.5rem;
+    text-align: center;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.game-container {
+    height: 100%;
+    min-width: 25rem;
+}
+
+iframe {
+    display: none;
+}
+
+.music-player-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 10rem;
+    overflow: hidden;
+    color: var(--white);
+}
+
+.music-player-container .input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.music-player-container #submit {
+    all: unset;
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    color: var(--green);
+    width: 3rem;
+    height: 2rem;
+    margin-left: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music-player-container #play-music {
+    all: unset;
+    color: var(--white);
+    width: 5rem;
+    height: 5rem;
+    font-size: 4rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music-player-container input {
+    appearance: none;
+    outline: none;
+    background: none;
+    color: var(--white);
+    font-size: 15px;
+    border: 1px solid var(--white);
+    margin: 5px;
+    height: 25px;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.music-player-container input::placeholder {
+    text-align: center;
+    font-family: 'Jua', sans-serif;
+    color: var(--gray1);
+}
+
+#title-input {
+    width: 13rem;
+}
+#artist-input {
+    width: 8rem;
+}
