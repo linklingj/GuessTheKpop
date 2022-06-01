@@ -1,13 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
     
     const timestamp = [1,2,4,7,11,16];
-    let tries = 1;
+    let tries = 6;
 
     const main_container = document.querySelector('.main-container');
     const play_Button = document.getElementById('play-music');
+    const progress_bar = document.getElementById('progress-bar');
+    const progress_bg = document.querySelectorAll('.progress-bg');
 
     let music;
     let widget;
+    let duration;
+    var musicPlaying = false;
     (async () => {
         const res = await fetch("./music_list.json");
         const jsonData = await res.json();
@@ -26,16 +30,33 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     })();
 
-
-    var musicPlaying = false;
-
     play_Button.addEventListener('click',() => {
-        if (musicPlaying) {
-            widget.pause();
-        } else {
+        if (!musicPlaying) {
+            widget.seekTo(0);
             widget.play();
+            startTimer();
         }
     });
+
+    let timer;
+    let maxTime;
+    function startTimer() {
+        maxTime = timestamp[tries-1] * 10;
+        time = 0;
+        timer = setInterval(myTimer,100);
+    }
+
+    let time = 0;
+    function myTimer() {
+        time++;
+        const width = (time * 100 / 160).toString() + '%';
+        progress_bar.style.width = width;
+        if (time >= maxTime) {
+            window.clearInterval(timer);
+            time = 0;
+            widget.pause();
+        }
+    }
 
     function updateMusicPlayer() {
         let w = document.createElement("iframe");
