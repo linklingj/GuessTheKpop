@@ -64,6 +64,7 @@ h1 {
     overflow: hidden;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .game-container {
@@ -80,9 +81,31 @@ iframe {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 10rem;
+    min-height: 15rem;
     overflow: hidden;
     color: var(--white);
+}
+
+.music-player-container .progress-container {
+    width: 100%;
+    max-width: 500px;
+    height: 8px;
+    background-color: var(--black);
+    margin-bottom: 20px;
+    border-left: 1px solid var(--white);
+    border-right: 1px solid var(--white);
+}
+
+.music-player-container .progress-bar {
+    height: inherit;
+    width: 30%;
+    background-color: var(--green);
+}
+
+.music-player-container .progress-container .progress-bg {
+    height: inherit;
+    width: 50%;
+    background-color: var(--gray1);
 }
 
 .music-player-container .input-container {
