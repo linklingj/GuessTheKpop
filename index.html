@@ -32,16 +32,22 @@
         </div>
       </header>
       <div class="main-container">
+        <div class="guess active" id="g1"><div class="state _a" id="none"></div><div class="text" id="artist"></div><div class="state _t" id="none"></div><div class="text" id="title"></div></div>
+        <div class="guess inactive" id="g2"><div class="state _a" id="none"></div><div class="text" id="artist"></div><div class="state _t" id="none"></div><div class="text" id="title"></div></div>
+        <div class="guess inactive" id="g3"><div class="state _a" id="none"></div><div class="text" id="artist"></div><div class="state _t" id="none"></div><div class="text" id="title"></div></div>
+        <div class="guess inactive" id="g4"><div class="state _a" id="none"></div><div class="text" id="artist"></div><div class="state _t" id="none"></div><div class="text" id="title"></div></div>
+        <div class="guess inactive" id="g5"><div class="state _a" id="none"></div><div class="text" id="artist"></div><div class="state _t" id="none"></div><div class="text" id="title"></div></div>
+        <div class="guess inactive" id="g6"><div class="state _a" id="none"></div><div class="text" id="artist"></div><div class="state _t" id="none"></div><div class="text" id="title"></div></div>
       </div>
       <div class="music-player-container">
         <div class="progress-container">
           <div class="bg-container">
-            <div class="progress-bg" id="bg1"></div>
-            <div class="progress-bg" id="bg2"></div>
-            <div class="progress-bg" id="bg3"></div>
-            <div class="progress-bg" id="bg4"></div>
-            <div class="progress-bg" id="bg5"></div>
-            <div class="progress-bg" id="bg6"></div>
+            <div class="progress-bg active" id="bg1"></div>
+            <div class="progress-bg inactive" id="bg2"></div>
+            <div class="progress-bg inactive" id="bg3"></div>
+            <div class="progress-bg inactive" id="bg4"></div>
+            <div class="progress-bg inactive" id="bg5"></div>
+            <div class="progress-bg inactive" id="bg6"></div>
           </div>
           <div class="progress-bar" id="progress-bar">
             <span></span>
@@ -54,6 +60,7 @@
           <input type="text" id="title-input" placeholder="제목" />
           이야!
           <button id="submit">확인</button>
+          <button id="skip">스킵</button>
         </div>
         <button id="play-music">
           <ion-icon name="play-circle-outline"></ion-icon>

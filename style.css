@@ -54,7 +54,7 @@ header .header-container button {
 }
 
 h1 {
-    color: white;
+    color: var(--white);
     text-align: center;
 }
 
@@ -63,8 +63,47 @@ h1 {
     height: 100%;
     overflow: hidden;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.main-container .guess {
+    width: 80%;
+    max-width: 500px;
+    height: 30px;
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.main-container .guess .text {
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.main-container .inactive .text {
+    border: 1px solid var(--gray1);
+}
+.main-container .active .text {
+    border: 1px solid var(--white);
+}
+
+.main-container .guess .state {
+    height: 30px;
+    width: 10%;
+    font-size: 25px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.main-container .guess #artist {
+    height: inherit;
+    width: 30%;
+}
+.main-container .guess #title {
+    height: inherit;
+    width: 50%;
 }
 
 .game-container {
@@ -90,7 +129,7 @@ iframe {
     position: relative;
     width: 100%;
     max-width: 500px;
-    height: 8px;
+    height: 12px;
     background-color: var(--black);
     margin-bottom: 20px;
     border-left: 1px solid var(--white);
@@ -103,20 +142,29 @@ iframe {
     top: 0;
     left: 2px;
     width: 1%;
-    background-color: var(--green);
+    background-color: var(--white);
+    z-index: 10;
 }
 
 .music-player-container .progress-container .bg-container {
     height: inherit;
-    background-color: var(--gray1);
+    background-color: var(--black);
+    border: 1px solid var(--white);
     display: flex;
 }
 .music-player-container .progress-container .bg-container .progress-bg {
     height: inherit;
     border-right: 2px solid var(--white);
     margin: 0;
-    z-index: 10;
 }
+
+.bg-container .active {
+    background-color: var(--gray1);
+}
+.bg-container .inactive {
+    background-color: var(--black);
+}
+
 #bg1 {
     border-left: 2px solid var(--white);
     width: 6.25%;
@@ -144,11 +192,9 @@ iframe {
     flex-wrap: wrap;
 }
 
-.music-player-container #submit {
+.music-player-container .input-container button {
     all: unset;
-    border: 1px solid var(--white);
     border-radius: 5px;
-    color: var(--green);
     width: 3rem;
     height: 2rem;
     margin-left: 10px;
@@ -157,6 +203,15 @@ iframe {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.music-player-container .input-container #submit {
+    background: var(--green);
+    color: var(--white);
+}
+.music-player-container .input-container #skip {
+    background: var(--gray1);
+    color: var(--white);
 }
 
 .music-player-container #play-music {
