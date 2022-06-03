@@ -269,7 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
         }
-        let historyString = "KPOP 노래 맞추기:" + music["artist"] + ", " + music["title"] + "\n" + s + "\nhttps://linklingj.github.io/GuessTheKpop";
+        let historyString = "KPOP 노래 맞추기 ➡ " + music["artist"][0] + ", " + music["title"][0] + "\n" + s + "\nhttps://linklingj.github.io/GuessTheKpop";
         navigator.clipboard.writeText(historyString);
         save_text.textContent = "클립보드 복사 완료!";
         setTimeout(() => {
