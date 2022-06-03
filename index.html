@@ -31,13 +31,32 @@
           </button>
         </div>
       </header>
-      <div class="main-container">
+      <div class="main-container show">
         <div class="guess active" id="g1"><div class="state _a" id="none"></div><div class="text" id="artist"></div><div class="state _t" id="none"></div><div class="text" id="title"></div></div>
         <div class="guess inactive" id="g2"><div class="state _a" id="none"></div><div class="text" id="artist"></div><div class="state _t" id="none"></div><div class="text" id="title"></div></div>
         <div class="guess inactive" id="g3"><div class="state _a" id="none"></div><div class="text" id="artist"></div><div class="state _t" id="none"></div><div class="text" id="title"></div></div>
         <div class="guess inactive" id="g4"><div class="state _a" id="none"></div><div class="text" id="artist"></div><div class="state _t" id="none"></div><div class="text" id="title"></div></div>
         <div class="guess inactive" id="g5"><div class="state _a" id="none"></div><div class="text" id="artist"></div><div class="state _t" id="none"></div><div class="text" id="title"></div></div>
         <div class="guess inactive" id="g6"><div class="state _a" id="none"></div><div class="text" id="artist"></div><div class="state _t" id="none"></div><div class="text" id="title"></div></div>
+      </div>
+      <div class="sub-container noshow">
+        <div class="answer">
+          <h3>정답: </h3>
+          <p id="reaction"></p>
+          <div id="history">
+            <div class="historyBox" id="box1"></div>
+            <div class="historyBox" id="box2"></div>
+            <div class="historyBox" id="box3"></div>
+            <div class="historyBox" id="box4"></div>
+            <div class="historyBox" id="box5"></div>
+            <div class="historyBox" id="box6"></div>
+          </div>
+          <div class="button-container">
+            <button id="replay">다시 시작</button>
+            <button id="share">공유</button>
+          </div>
+          <div id="cpytxt"></div>
+        </div>
       </div>
       <div class="music-player-container">
         <div class="progress-container">

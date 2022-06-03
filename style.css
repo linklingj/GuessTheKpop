@@ -8,12 +8,14 @@
     --green: #1D7E05;
     --red: #FF0000;
     --blue: #29ABE0;
+    --yellow: #d3dc1fd7;
 }
 
 * {
     margin: 0;
     padding: 0;
     word-break: keep-all;
+    visibility: visible;
 }
 
 body {
@@ -58,9 +60,17 @@ h1 {
     text-align: center;
 }
 
+.show {
+    height: 100%;
+}
+
+.noshow {
+    height: 0%;
+}
+
 .main-container {
     width: 100%;
-    height: 100%;
+    visibility: hidden;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -106,9 +116,80 @@ h1 {
     width: 50%;
 }
 
-.game-container {
-    height: 100%;
-    min-width: 25rem;
+.sub-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-container .answer {
+    margin-bottom: 15px;
+}
+
+.sub-container .answer h3 {
+    text-align: center;
+    color: var(--white);
+}
+
+.sub-container .answer #cpytxt {
+    height: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--gray2);
+}
+
+.sub-container #reaction {
+    text-align: center;
+    color: var(--gray1);
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.sub-container #history {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.sub-container #history .historyBox {
+    width: 20px;
+    height: 3px;
+    background-color: var(--gray2);
+    margin-right: 5px;
+}
+
+.sub-container .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-container .button-container button {
+    all: unset;
+    border-radius: 5px;
+    width: 3rem;
+    height: 2rem;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-container .button-container #replay {
+    font-size: 0.8rem;
+    background: var(--green);
+    color: var(--white);
+}
+
+.sub-container .button-container #share {
+    font-size: 1rem;
+    background: var(--gray1);
+    color: var(--white);
 }
 
 iframe {
@@ -138,7 +219,7 @@ iframe {
 
 .music-player-container .progress-bar {
     position: absolute;
-    height: inherit;
+    height: 14px;
     top: 0;
     left: 2px;
     width: 1%;
@@ -198,7 +279,7 @@ iframe {
     width: 3rem;
     height: 2rem;
     margin-left: 10px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: center;
     display: flex;
     justify-content: center;
