@@ -21,6 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const progress_bar = document.getElementById('progress-bar');
     const progress_bg = document.querySelectorAll('.progress-bg');
 
+    const popup = document.getElementById('popup');
+    const openPopup = document.querySelector('.trigger_popup');
+    const closePopup = document.querySelector('.close_popup');
+
     let music;
     let widget;
     let musicPlaying = false;
@@ -284,4 +288,11 @@ document.addEventListener("DOMContentLoaded", () => {
         w.src = src=`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${music["track_num"]}&color=%236ef028&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false`;
         sub_container.appendChild(w);
     }
+
+    openPopup.addEventListener('click', () => {
+        popup.classList.add("open-popup");
+    });
+    closePopup.addEventListener('click', () => {
+        popup.classList.remove("open-popup");
+    });
 })
